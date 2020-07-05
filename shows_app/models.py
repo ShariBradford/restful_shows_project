@@ -14,7 +14,7 @@ class Show(models.Model):
     # id INT
     title = models.CharField(max_length=255)
     desc = models.TextField()
-    network = models.ManyToManyField(Network,related_name="shows")
+    networks = models.ManyToManyField(Network,related_name="shows")
     release_date = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add = True)
     updated_at = models.DateTimeField(auto_now = True)
